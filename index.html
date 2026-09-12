@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nicolly Lash Designer | Realce seu olhar</title>
+
+  <meta name="description" content="Nicolly Lash Designer em Carbonita - MG. Realce seu olhar com cuidado, beleza e atendimento personalizado.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rosa: #d98baa;
+      --rosa-claro: #f8e9ef;
+      --rosa-medio: #efc5d4;
+      --rosa-escuro: #b85f83;
+      --preto: #171317;
+      --cinza: #6d666b;
+      --branco: #ffffff;
+      --fundo: #fff9fb;
+      --sombra: 0 15px 40px rgba(80, 35, 55, 0.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--preto);
+      background: var(--fundo);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 249, 251, 0.94);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(217, 139, 170, 0.15);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      width: 70px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .menu a {
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: var(--rosa-escuro);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 30px;
+      background: var(--rosa);
+      color: white;
+      font-weight: 700;
+      border: none;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--rosa-escuro);
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 130px 0 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero-text span {
+      color: var(--rosa-escuro);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 7vw, 78px);
+      line-height: 1;
+      margin: 18px 0 24px;
+    }
+
+    .hero h1 em {
+      color: var(--rosa-escuro);
+      font-style: normal;
+    }
+
+    .hero p {
+      max-width: 520px;
+      color: var(--cinza);
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .local {
+      margin-top: 16px;
+      font-size: 14px !important;
+      color: var(--cinza);
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 650px;
+      object-fit: cover;
+      border-radius: 220px 220px 25px 25px;
+      box-shadow: var(--sombra);
+    }
+
+    .hero-card {
+      position: absolute;
+      bottom: 25px;
+      left: -30px;
+      background: white;
+      padding: 18px 24px;
+      border-radius: 18px;
+      box-shadow: var(--sombra);
+      font-weight: 600;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title span {
+      color: var(--rosa-escuro);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(36px, 5vw, 52px);
+      margin-top: 10px;
+    }
+
+    .section-title p {
+      color: var(--cinza);
+      max-width: 650px;
+      margin: 15px auto 0;
+    }
+
+    /* SOBRE */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 580px;
+      object-fit: cover;
+      border-radius: 25px;
+      box-shadow: var(--sombra);
+    }
+
+    .about-text h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 38px;
+      margin-bottom: 22px;
+    }
+
+    .about-text p {
+      color: var(--cinza);
+      margin-bottom: 18px;
+      font-size: 17px;
+    }
+
+    /* PROCEDIMENTOS */
+
+    .procedures {
+      background: var(--rosa-claro);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(80, 35, 55, 0.07);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sombra);
+    }
+
+    .card-image {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 24px;
+    }
+
+    .card-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .card-content p {
+      color: var(--cinza);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: var(--rosa-escuro);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    /* DURABILIDADE */
+
+    .care {
+      background: white;
+    }
+
+    .care-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .care-box {
+      padding: 30px;
+      background: var(--rosa-claro);
+      border-radius: 20px;
+    }
+
+    .care-box h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .care-box p {
+      color: var(--cinza);
+    }
+
+    /* GALERIA */
+
+    .gallery {
+      background: var(--fundo);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.02);
+    }
+
+    /* DIFERENCIAIS */
+
+    .differentials {
+      background: white;
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .diff {
+      padding: 30px 24px;
+      border: 1px solid #f0d8e1;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .diff-icon {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--rosa-claro);
+      color: var(--rosa-escuro);
+      font-size: 22px;
+    }
+
+    .diff h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .diff p {
+      color: var(--cinza);
+      font-size: 14px;
+    }
+
+    /* AGENDAMENTO */
+
+    .booking {
+      background: var(--rosa-claro);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .step {
+      background: white;
+      padding: 32px;
+      border-radius: 22px;
+      text-align: center;
+    }
+
+    .number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      background: var(--rosa);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--cinza);
+      font-size: 14px;
+    }
+
+    /* VALORES */
+
+    .values {
+      background: white;
+    }
+
+    .values-box {
+      max-width: 750px;
+      margin: auto;
+      background: var(--rosa-claro);
+      border-radius: 25px;
+      padding: 35px;
+    }
+
+    .value-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(184, 95, 131, 0.18);
+      font-weight: 600;
+    }
+
+    .value-row:last-child {
+      border-bottom: none;
+    }
+
+    .value-row span:last-child {
+      color: var(--rosa-escuro);
+    }
+
+    /* CTA */
+
+    .final-cta {
+      padding: 110px 0;
+      text-align: center;
+      background: var(--preto);
+      color: white;
+    }
+
+    .final-cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 6vw, 58px);
+      margin-bottom: 18px;
+    }
+
+    .final-cta p {
+      color: #ddd;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--preto);
+      color: white;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 0;
+      text-align: center;
+      font-size: 13px;
+      color: #c9c9c9;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 950px) {
+
+      .menu {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-image {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .diff-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-image img {
+        height: 500px;
+        border-radius: 150px 150px 20px 20px;
+      }
+
+      .hero-card {
+        left: 10px;
+        bottom: 15px;
+      }
+
+      .cards,
+      .care-grid,
+      .gallery-grid,
+      .diff-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .card-image {
+        height: 350px;
+      }
+
+      .gallery-grid img {
+        height: 400px;
+      }
+
+      .about-image img {
+        height: 500px;
+      }
+
+      .values-box {
+        padding: 22px;
+      }
+
+      .value-row {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="#inicio">
+        <img src="logo-nicolly.png" alt="Nicolly Lash Designer" class="logo">
+      </a>
+
+      <nav class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#procedimentos">Procedimentos</a>
+        <a href="#galeria">Trabalhos</a>
+        <a href="#valores">Valores</a>
+        <a href="#agendamento">Agendamento</a>
+      </nav>
+
+      <a class="btn" href="https://wa.me/553897549585" target="_blank">
+        Agende seu horário
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="container hero-grid">
+
+        <div class="hero-text">
+
+          <span>Nicolly Lash Designer</span>
+
+          <h1>
+            Realce<br>
+            seu <em>olhar.</em>
+          </h1>
+
+          <p>
+            Cuidado, beleza e atenção aos detalhes para deixar
+            seu olhar ainda mais marcante.
+          </p>
+
+          <a class="btn" href="https://wa.me/553897549585" target="_blank">
+            Agende seu horário
+          </a>
+
+          <p class="local">
+            📍 Carbonita – MG
+          </p>
+
+        </div>
+
+        <div class="hero-image">
+
+          <img src="trabalho-01.png" alt="Trabalho de extensão de cílios">
+
+          <div class="hero-card">
+            ✨ Beleza que valoriza seu olhar
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section class="about" id="sobre">
+
+      <div class="container">
+
+        <div class="section-title">
+          <span>Sobre mim</span>
+          <h2>Prazer, eu sou a Nicolly!</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-image">
+            <img src="nicolly-profissional.png" alt="Nicolly Lash Designer">
+          </div>
+
+          <div class="about-text">
+
+            <h3>Um olhar ainda mais especial.</h3>
+
+            <p>
+              Olá, eu sou a Nicolly! ✨ Sou apaixonada pelo universo
+              dos cílios e por transformar olhares através do meu trabalho.
+            </p>
+
+            <p>
+              Cada atendimento é realizado com cuidado, atenção aos
+              detalhes e pensando no estilo e na beleza de cada cliente.
+            </p>
+
+            <p>
+              Meu objetivo é fazer você se sentir ainda mais linda
+              e confiante. 💕
+            </p>
+
+            <a class="btn" href="https://wa.me/553897549585" target="_blank">
+              Quero agendar
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROCEDIMENTOS -->
+
+    <section class="procedures" id="procedimentos">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Procedimentos</span>
+
+          <h2>Escolha seu estilo</h2>
+
+          <p>
+            Encontre a opção que combina com o seu estilo
+            e realce ainda mais a beleza do seu olhar.
+          </p>
+
+        </div>
+
+
+        <div class="cards">
+
+          <!-- BRASILEIRO -->
+
+          <article class="card">
+
+            <div class="card-image">
+              <img src="trabalho-02.png" alt="Cílios Brasileiro">
+            </div>
+
+            <div class="card-content">
+
+              <h3>Cílios Brasileiro</h3>
+
+              <p>
+                Volume e definição para um olhar marcante
+                e elegante.
+              </p>
+
+              <div class="price">
+                R$ 130,00
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- EGÍPCIO -->
+
+          <article class="card">
+
+            <div class="card-image">
+              <img src="trabalho-03.png" alt="Volume Egípcio">
+            </div>
+
+            <div class="card-content">
+
+              <h3>Volume Egípcio</h3>
+
+              <p>
+                Um efeito sofisticado para destacar
+                o olhar.
+              </p>
+
+              <div class="price">
+                R$ 140,00
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- FOX -->
+
+          <article class="card">
+
+            <div class="card-image">
+              <img src="trabalho-04.png" alt="Cílios Fox">
+            </div>
+
+            <div class="card-content">
+
+              <h3>Fox</h3>
+
+              <p>
+                Efeito alongado e marcante para
+                um olhar poderoso.
+              </p>
+
+              <div class="price">
+                R$ 150,00
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- TUFUNHO -->
+
+          <article class="card">
+
+            <div class="card-image">
+              <img src="trabalho-01.png" alt="Cílios Tufinho">
+            </div>
+
+            <div class="card-content">
+
+              <h3>Cílios Tufinho</h3>
+
+              <p>
+                Praticidade e destaque para o olhar,
+                utilizando cola fria.
+              </p>
+
+              <div class="price">
+                R$ 45,00
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DURABILIDADE E CUIDADOS -->
+
+    <section class="care">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Cuidados</span>
+
+          <h2>Durabilidade</h2>
+
+          <p>
+            Alguns procedimentos possuem uma durabilidade
+            específica e precisam de cuidados para manter
+            o resultado bonito.
+          </p>
+
+        </div>
+
+        <div class="care-grid">
+
+          <div class="care-box">
+
+            <h3>Manutenção fio a fio</h3>
+
+            <p>
+              Valor: <strong>R$ 90,00</strong>
+            </p>
+
+            <p>
+              Durabilidade aproximada:
+              <strong>15 a 20 dias.</strong>
+            </p>
+
+          </div>
+
+
+          <div class="care-box">
+
+            <h3>Cílios Tufinho</h3>
+
+            <p>
+              Aplicação realizada com
+              <strong>cola fria.</strong>
+            </p>
+
+            <p>
+              Durabilidade aproximada:
+              <strong>10 a 15 dias.</strong>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALERIA -->
+
+    <section class="gallery" id="galeria">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Meu trabalho</span>
+
+          <h2>Galeria de resultados</h2>
+
+          <p>
+            Alguns dos trabalhos realizados pela Nicolly.
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <img src="trabalho-01.png" alt="Resultado de extensão de cílios">
+
+          <img src="trabalho-02.png" alt="Resultado de extensão de cílios">
+
+          <img src="trabalho-03.png" alt="Resultado de extensão de cílios">
+
+          <img src="trabalho-04.png" alt="Resultado de extensão de cílios">
+
+          <img src="trabalho-02.png" alt="Resultado de extensão de cílios">
+
+          <img src="trabalho-03.png" alt="Resultado de extensão de cílios">
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DIFERENCIAIS -->
+
+    <section class="differentials">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Por que escolher a Nicolly?</span>
+
+          <h2>Seu momento de cuidado</h2>
+
+        </div>
+
+
+        <div class="diff-grid">
+
+          <div class="diff">
+
+            <div class="diff-icon">♡</div>
+
+            <h3>Atendimento personalizado</h3>
+
+            <p>
+              Cada atendimento é pensado de acordo
+              com o estilo e a beleza de cada cliente.
+            </p>
+
+          </div>
+
+
+          <div class="diff">
+
+            <div class="diff-icon">✦</div>
+
+            <h3>Atenção aos detalhes</h3>
+
+            <p>
+              Cuidado em cada etapa para valorizar
+              ainda mais o resultado.
+            </p>
+
+          </div>
+
+
+          <div class="diff">
+
+            <div class="diff-icon">✨</div>
+
+            <h3>Realce da beleza</h3>
+
+            <p>
+              Um olhar marcante sem deixar de lado
+              a sua essência.
+            </p>
+
+          </div>
+
+
+          <div class="diff">
+
+            <div class="diff-icon">♡</div>
+
+            <h3>Cuidado</h3>
+
+            <p>
+              Um ambiente pensado para você se sentir
+              linda e confiante.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- AGENDAMENTO -->
+
+    <section class="booking" id="agendamento">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Agendamento</span>
+
+          <h2>Como funciona?</h2>
+
+          <p>
+            Agendar seu horário é simples.
+          </p>
+
+        </div>
+
+
+        <div class="steps">
+
+          <div class="step">
+
+            <div class="number">1</div>
+
+            <h3>Entre em contato</h3>
+
+            <p>
+              Clique no botão e fale diretamente
+              com a Nicolly pelo WhatsApp.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="number">2</div>
+
+            <h3>Escolha seu procedimento</h3>
+
+            <p>
+              Informe qual procedimento você deseja
+              realizar.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="number">3</div>
+
+            <h3>Agende seu horário</h3>
+
+            <p>
+              Combine o melhor horário e prepare-se
+              para realçar seu olhar.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VALORES -->
+
+    <section class="values" id="valores">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Valores</span>
+
+          <h2>Procedimentos</h2>
+
+        </div>
+
+
+        <div class="values-box">
+
+          <div class="value-row">
+            <span>Cílios Brasileiro / Volume Brasileiro</span>
+            <span>R$ 130,00</span>
+          </div>
+
+          <div class="value-row">
+            <span>Egípcio / Volume Egípcio</span>
+            <span>R$ 140,00</span>
+          </div>
+
+          <div class="value-row">
+            <span>Fox</span>
+            <span>R$ 150,00</span>
+          </div>
+
+          <div class="value-row">
+            <span>Cílios Tufinho</span>
+            <span>R$ 45,00</span>
+          </div>
+
+          <div class="value-row">
+            <span>Manutenção fio a fio</span>
+            <span>R$ 90,00</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA FINAL -->
+
+    <section class="final-cta">
+
+      <div class="container">
+
+        <h2>Pronta para transformar seu olhar?</h2>
+
+        <p>
+          Agende seu horário com a Nicolly e descubra
+          o procedimento ideal para você.
+        </p>
+
+        <a
+          class="btn"
+          href="https://wa.me/553897549585?text=Ol%C3%A1%2C%20Nicolly!%20%F0%9F%92%95%20Vi%20sua%20p%C3%A1gina%20e%20gostaria%20de%20agendar%20meu%20hor%C3%A1rio."
+          target="_blank"
+        >
+          Agendar pelo WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 Nicolly Lash Designer · Carbonita – MG
+
+    </div>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/553897549585?text=Ol%C3%A1%2C%20Nicolly!%20%F0%9F%92%95%20Vi%20sua%20p%C3%A1gina%20e%20gostaria%20de%20agendar%20meu%20hor%C3%A1rio."
+    target="_blank"
+    aria-label="Falar com Nicolly pelo WhatsApp"
+  >
+    ☎
+  </a>
+
+</body>
+</html>
+logo-nicolly.png
+nicolly-profissional.png
+trabalho-01.png
+trabalho-02.png
+trabalho-03.png
+trabalho-04.png
